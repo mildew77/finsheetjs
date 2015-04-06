@@ -1,0 +1,36 @@
+/* restore "body" styling that were changes by "jasmine.css"... */
+body {
+background-color: white;
+padding: 0; margin: 8px; 
+   
+  
+}
+ 
+
+/* ... but remain the "jasmine.css" styling for the Jasmine reporting */
+.jasmine_reporter { background-color: #eeeeee; padding: 0; margin: 0; }
+.hold{
+  border-style:solid;
+  border-width: 1px;
+  border-color:grey;
+  height:600px;
+  margin:10%;
+  overflow-y: scroll;
+  overflow-x:hidden;
+  padding:2%;
+}
+
+#graphHold{
+  display:none;
+  
+}
+#plotDiv{
+
+height: 400px;
+width: 600px;
+}
+
+.portSumHold{
+
+	margin-bottom: -80px;
+}
