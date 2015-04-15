@@ -2,7 +2,6 @@ app.service('graph',  function(){
 
  this.test = function(){
 
-    console.log(this.element);
   };
 
 this.element = $('#plotDiv');

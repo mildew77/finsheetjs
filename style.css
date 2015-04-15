@@ -16,7 +16,7 @@ padding: 0; margin: 8px;
   height:600px;
   margin:10%;
   overflow-y: scroll;
-  overflow-x:hidden;
+  overflow-x:auto;
   padding:2%;
 }
 
@@ -26,11 +26,17 @@ padding: 0; margin: 8px;
 }
 #plotDiv{
 
-height: 400px;
-width: 600px;
+height: 300px;
+width: 900px;
 }
 
 .portSumHold{
 
 	margin-bottom: -80px;
+}
+
+.error{
+
+  color:red;
+  border-color:red;
 }

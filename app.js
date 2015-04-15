@@ -1,8 +1,8 @@
 var app = angular.module('portfolioComposition', ['hmTouchEvents'])
 
-.controller('MainCtrl', function($scope,graph) {
- 
-  
+.controller('MainCtrl', function($scope,graph,cukie) {
+
+
   $scope.name = 'World';
   $scope.onHammer = function onHammer(event) {
 
@@ -28,19 +28,30 @@ $scope.sum = "100 %";
       localSum  += $scope.assets[i].Percent / 1;
     }
 
+if (localSum == 100) {
+$('.portSumHold').removeClass( "error" );
+ $('.percentInput').removeClass( "error" );
+} else{
+  $('.portSumHold').addClass( "error" )
+  $('.percentInput').addClass( "error" );
+};
 
     $scope.sum =  localSum + " %";
+
+    $scope.updateGraph();
   }
 
   $scope.number = "Test";
+
+
   
 
-$scope.testing= function(){
+$scope.updateGraph= function(){
 
 $scope.update();
 graph.plot(graph.element,graph.data,graph.options);
 
-graph.test();
+
 };
  
 
@@ -55,9 +66,11 @@ graph.test();
    
     
   };
-  console.log(graph.data);
+ 
  
 };
+
+
 
 
   $scope.assets = [{
@@ -161,6 +174,13 @@ graph.test();
     'Color': '#6E0A1E',
     'Percent': 5
   }];
+
+  document.cookie="username=John Doe";
+   console.log(document.cookie.username);
+ cukie.setCookie("test","okok",365);
+ $scope.cool =cukie.getCookie("test");
+
   
+
    
 });
